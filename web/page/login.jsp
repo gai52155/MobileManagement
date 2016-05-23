@@ -39,7 +39,7 @@
         <c:remove var="error" scope="session" />
         <form role="form" class="col-md-6" method="POST" action="../Login">
             <div class="form-group">
-                <label for="Username">Username</label>
+                <label for="Username">Usernameeeeee</label>
                 <input type="text" class="form-control" id="username" name="username" required>
             </div>
             <div class="form-group">
