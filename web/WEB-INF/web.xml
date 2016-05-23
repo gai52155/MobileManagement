@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+    
+    <servlet>
+        <display-name>Login</display-name>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>controller.Login</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <display-name>History</display-name>
+        <servlet-name>History</servlet-name>
+        <servlet-class>controller.History</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <display-name>SearchDevice</display-name>
+        <servlet-name>SearchDevice</servlet-name>
+        <servlet-class>controller.SearchDevice</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <display-name>AddEmployee</display-name>
+        <servlet-name>AddEmployee</servlet-name>
+        <servlet-class>controller.AddEmployee</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>History</servlet-name>
+        <url-pattern>/History</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>SearchDevice</servlet-name>
+        <url-pattern>/SearchDevice</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>AddEmployee</servlet-name>
+        <url-pattern>/AddEmployee</url-pattern>
+    </servlet-mapping>
+</web-app>
