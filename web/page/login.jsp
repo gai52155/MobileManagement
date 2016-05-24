@@ -30,7 +30,7 @@
     <div class="container">
         <legend><h2>Login</h2></legend>
         <c:if test="${sessionScope.error != null}">
-            <% String error = session.getAttribute("error").toString(); %>
+            <% String error = session.getAttribute("errorนะเมิงงง+").toString(); %>
             <div class="alert alert-danger">
                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                 <h4><c:out value="${error}"/></h4>
