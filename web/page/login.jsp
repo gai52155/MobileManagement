@@ -22,22 +22,21 @@
           <a class="navbar-brand" href="../index.jsp">Mobile Management</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="login.jsp"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
         </ul>
       </div>
     </nav>
     
     <div class="container">
         <legend><h2>Login</h2></legend>
-        <c:if test="${sessionScope.error != null}">
-            <% String error = session.getAttribute("error").toString(); %>
+        <c:if test="${not empty error}">
+            <c:set var="path" scope="request" value="Login"/>
             <div class="alert alert-danger">
                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                 <h4><c:out value="${error}"/></h4>
             </div>
         </c:if>
-        <c:remove var="error" scope="session" />
-        <form role="form" class="col-md-6" method="POST" action="../Login">
+        <form role="form" class="col-md-6" method="POST" action="Login">
             <div class="form-group">
                 <label for="Username">Username</label>
                 <input type="text" class="form-control" id="username" name="username" required>

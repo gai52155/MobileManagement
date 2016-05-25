@@ -1,18 +1,14 @@
 package controller;
 
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class LoginController
  */
-public class AddEmployee extends HttpServlet 
+public class AddEmployee extends BaseService 
 {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    @Override
+    void process(DBCommand connect) throws Exception 
     {
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
@@ -40,12 +36,10 @@ public class AddEmployee extends HttpServlet
         String lastnameen = request.getParameter("lastnameen");
         String nickname = request.getParameter("nickname");
         
-        DBCommand connect = new DBCommand();
         
         String message = connect.insertemployee(identify, prefixth, prefixen, 
                                                 nameth, nameen, lastnameth, 
                                                 lastnameen, nickname);
-        connect.close();
         
         session.setAttribute("message", message);
         response.sendRedirect("page/addemployee.jsp");

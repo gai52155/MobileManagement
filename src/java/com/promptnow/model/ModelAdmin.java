@@ -3,39 +3,39 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controller;
+package com.promptnow.model;
 
 /**
  *
  * @author Katawut
  */
-public class Model_admin 
+public class ModelAdmin 
 {
     private int id;
     private String username;
     private String password;
 
-    void setid(int i) {
+    public void setid(int i) {
         this.id = i;
     }
 
-    void setusername(String i) {
+    public void setusername(String i) {
         this.username = i;
     }
 
-    void setpassword(String i) {
+    public void setpassword(String i) {
         this.password = i;
     }
 
-    int getid() {
+    public int getid() {
         return id;
     }
 
-    String getusername() {
+    public String getusername() {
         return username;
     }
 
-    String getpassword() {
+    public String getpassword() {
         return password;
     }
 }

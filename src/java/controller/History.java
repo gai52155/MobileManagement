@@ -1,5 +1,6 @@
 package controller;
 
+import com.promptnow.model.ModelHistory;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -10,9 +11,10 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class LoginController
  */
-public class History extends HttpServlet 
+public class History extends BaseService 
 {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    @Override
+    void process(DBCommand connect) throws Exception 
     {
         request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
@@ -22,7 +24,6 @@ public class History extends HttpServlet
         String date2 = request.getParameter("last_time");
         int n = 0; //COUNT
         
-        DBCommand connect = new DBCommand();
         
         try { n = connect.gethistoryCount(date1, date2); } catch(Exception e){ System.out.println("GetCount Error: "+e); }
         System.out.println(n);
@@ -34,7 +35,7 @@ public class History extends HttpServlet
         }
         else
         {
-            Model_history model[] = new Model_history[n];
+            ModelHistory model[] = new ModelHistory[n];
             String data[] = new String [n*6];
 
             try
@@ -43,7 +44,7 @@ public class History extends HttpServlet
                 data = connect.gethistoryData(n, model);
             }
             catch(Exception e){ System.out.println("SET OR GET Error : "+e);}
-            connect.close();
+            
             session.setAttribute("history", data);
             response.sendRedirect("page/history.jsp");
         }

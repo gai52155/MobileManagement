@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package controller;
+package com.promptnow.model;
 
 /**
  *
  * @author Katawut
  */
-public class Model_history
+public class ModelHistory
 {
     private int id;
     private String imei;
@@ -18,51 +18,51 @@ public class Model_history
     private double lattidude;
     private double longtidude;
 
-    void setid(int i) {
+    public void setid(int i) {
         this.id = i;
     }
 
-    void setimei(String i) {
+    public void setimei(String i) {
         this.imei = i;
     }
 
-    void setemp_id(int i) {
+    public void setemp_id(int i) {
         this.emp_id = i;
     }
     
-    void setborrow_date(String i) {
+    public void setborrow_date(String i) {
         this.borrow_date = i;
     }
 
-    void setlattidude(double i) {
+    public void setlattidude(double i) {
         this.lattidude = i;
     }
 
-    void setlongtidude(double i) {
+    public void setlongtidude(double i) {
         this.longtidude = i;
     }
 
-    int getid() {
+    public int getid() {
         return id;
     }
 
-    String getimei() {
+    public String getimei() {
         return imei;
     }
 
-    int getemp_id() {
+    public int getemp_id() {
         return emp_id;
     }
     
-    String getborrow_date() {
+    public String getborrow_date() {
         return borrow_date;
     }
 
-    double getlattidude() {
+    public double getlattidude() {
         return lattidude;
     }
 
-    double getlongtidude() {
+    public double getlongtidude() {
         return longtidude;
     }
 }
