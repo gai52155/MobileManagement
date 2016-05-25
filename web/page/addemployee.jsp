@@ -49,7 +49,7 @@
             <c:redirect url="../index.jsp"/>
         </c:if>
         
-        <c:if test="${sessionScope.message != null}">
+        <c:if test="${not empty message}">
             <div class="alert alert-info">
                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                 <h4><c:out value="${message}"/></h4>
@@ -58,7 +58,7 @@
         </c:if>
         <div class="container">
             <legend>เพื่มรายชื่อพนักงาน</legend>
-            <form name="myForm" method="POST" action="../AddEmployee">
+            <form name="myForm" method="POST" action="AddEmployee">
                 <div class="col-md-12">
                     <label class="control-label col-md-3" for="prefix">คำนำหน้า(ไทย) : </label>
                         <label class="radio-inline">

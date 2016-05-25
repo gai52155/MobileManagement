@@ -41,7 +41,7 @@ public class AddEmployee extends BaseService
                                                 nameth, nameen, lastnameth, 
                                                 lastnameen, nickname);
         
-        session.setAttribute("message", message);
-        response.sendRedirect("page/addemployee.jsp");
+        request.setAttribute("message", message);
+        request.getServletContext().getRequestDispatcher("/page/addemployee.jsp").forward(request, response);
     }
 }

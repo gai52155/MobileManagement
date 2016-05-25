@@ -23,8 +23,6 @@ public class Login extends BaseService {
         }
         
         if (row == 0) {
-            connect.close();
-            System.out.println("COME ON!");
             request.setAttribute("error", "ID OR PASSWORD Incorrect");
             
             request.getServletContext().getRequestDispatcher("/page/login.jsp").forward(request, response);
@@ -38,7 +36,6 @@ public class Login extends BaseService {
             } catch (SQLException e) {
                 System.out.println("SET OT GET error : " + e);
             }
-            connect.close();
             session.setAttribute("user", data[1]);
             response.sendRedirect("../index.jsp");
         }

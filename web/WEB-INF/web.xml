@@ -22,7 +22,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>History</servlet-name>
-        <url-pattern>/History</url-pattern>
+        <url-pattern>/page/History</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>SearchDevice</servlet-name>
@@ -30,7 +30,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>AddEmployee</servlet-name>
-        <url-pattern>/AddEmployee</url-pattern>
+        <url-pattern>/page/AddEmployee</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>

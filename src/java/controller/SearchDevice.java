@@ -77,7 +77,6 @@ public class SearchDevice extends BaseService {
         } catch (JSONException e) {
             System.out.println("JSON ERROR : " + e);
         }
-
         response.getWriter().write(jsonArray.toString());
     }
 }
